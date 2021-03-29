@@ -28,7 +28,7 @@ window.autologininfos = JSON.parse(config.getItem("autologininfos"));
 function patchCSS(mode, oled) {
   if (mode == "tools") {
     var link = document.createElement("link");
-    link.href = "https://projects.docsystem.xyz/pronotetools/tools.css?v=" + new Date().getTime();
+    link.href = "https://docsystem.xyz/pronotetools/tools.css";
     link.type = "text/css";
     link.rel = "stylesheet";
     document.getElementsByTagName("head")[0].appendChild(link);
@@ -38,21 +38,21 @@ function patchCSS(mode, oled) {
     if (mode == "auto") {
       if (isMobileAgent) {
         if (oled == "true") {
-          link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/mobile.autoblackmode.css?v=" + new Date().getTime());
+          link.setAttribute("href", "https://docsystem.xyz/pronotetools/mobile.autoblackmode.css");
           config.setItem("oled", "true");
         }
         else {
-          link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/mobile.autodarkmode.css?v=" + new Date().getTime());
+          link.setAttribute("href", "https://docsystem.xyz/pronotetools/mobile.autodarkmode.css");
           config.setItem("oled", "false");
         }
       }
       else {
         if (oled == "true") {
-          link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/autoblackmode.css?v=" + new Date().getTime());
+          link.setAttribute("href", "https://docsystem.xyz/pronotetools/autoblackmode.css");
           config.setItem("oled", "true");
         }
         else {
-          link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/autodarkmode.css?v=" + new Date().getTime());
+          link.setAttribute("href", "https://docsystem.xyz/pronotetools/autodarkmode.css");
           config.setItem("oled", "false");
         }
       }
@@ -61,26 +61,26 @@ function patchCSS(mode, oled) {
     else if (mode == "dark") {
       if (isMobileAgent) {
         if (oled == "true") {
-          link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/mobile.blackmode.css?v=" + new Date().getTime());
+          link.setAttribute("href", "https://docsystem.xyz/pronotetools/mobile.blackmode.css");
         }
         else {
-          link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/mobile.darkmode.css?v=" + new Date().getTime());
+          link.setAttribute("href", "https://docsystem.xyz/pronotetools/mobile.darkmode.css");
         }
       }
       else {
         if (oled == "true") {
-          link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/blackmode.css?v=" + new Date().getTime());
+          link.setAttribute("href", "https://docsystem.xyz/pronotetools/blackmode.css");
           config.setItem("oled", "true");
         }
         else {
-          link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/darkmode.css?v=" + new Date().getTime());
+          link.setAttribute("href", "https://docsystem.xyz/pronotetools/darkmode.css");
           config.setItem("oled", "false");
         }
       }
       config.setItem("mode", "dark");
     }
     else if (mode == "light") {
-      link.setAttribute("href", "https://projects.docsystem.xyz/pronotetools/lightmode.css?v=" + new Date().getTime());
+      link.setAttribute("href", "https://docsystem.xyz/pronotetools/lightmode.css");
       config.setItem("mode", "light");
     }
   }
@@ -89,21 +89,21 @@ function patchCSS(mode, oled) {
     if (mode == "auto") {
       if (isMobileAgent) {
         if (oled == "true") {
-          link.href = "https://projects.docsystem.xyz/pronotetools/mobile.autoblackmode.css?v=" + new Date().getTime();
+          link.href = "https://docsystem.xyz/pronotetools/mobile.autoblackmode.css";
           config.setItem("oled", "true");
         }
         else {
-          link.href = "https://projects.docsystem.xyz/pronotetools/mobile.autodarkmode.css?v=" + new Date().getTime();
+          link.href = "https://docsystem.xyz/pronotetools/mobile.autodarkmode.css";
           config.setItem("oled", "false");
         }
       }
       else {
         if (oled == "true") {
-          link.href = "https://projects.docsystem.xyz/pronotetools/autoblackmode.css?v=" + new Date().getTime();
+          link.href = "https://docsystem.xyz/pronotetools/autoblackmode.css";
           config.setItem("oled", "true");
         }
         else {
-          link.href = "https://projects.docsystem.xyz/pronotetools/autodarkmode.css?v=" + new Date().getTime();
+          link.href = "https://docsystem.xyz/pronotetools/autodarkmode.css";
           config.setItem("oled", "false");
         }
       }
@@ -112,28 +112,28 @@ function patchCSS(mode, oled) {
     else if (mode == "dark") {
       if (isMobileAgent) {
         if (oled == "true") {
-          link.href = "https://projects.docsystem.xyz/pronotetools/mobile.blackmode.css?v=" + new Date().getTime();
+          link.href = "https://docsystem.xyz/pronotetools/mobile.blackmode.css";
           config.setItem("oled", "true");
         }
         else {
-          link.href = "https://projects.docsystem.xyz/pronotetools/mobile.darkmode.css?v=" + new Date().getTime();
+          link.href = "https://docsystem.xyz/pronotetools/mobile.darkmode.css";
           config.setItem("oled", "false");
         }
       }
       else {
         if (oled == "true") {
-          link.href = "https://projects.docsystem.xyz/pronotetools/blackmode.css?v=" + new Date().getTime();
+          link.href = "https://docsystem.xyz/pronotetools/blackmode.css";
           config.setItem("oled", "true");
         }
         else {
-          link.href = "https://projects.docsystem.xyz/pronotetools/darkmode.css?v=" + new Date().getTime();
+          link.href = "https://docsystem.xyz/pronotetools/darkmode.css";
           config.setItem("oled", "false");
         }
       }
       config.setItem("mode", "dark");
     }
     else if (mode == "light") {
-      link.href = "https://projects.docsystem.xyz/pronotetools/lightmode.css?v=" + new Date().getTime();
+      link.href = "https://docsystem.xyz/pronotetools/lightmode.css";
       config.setItem("mode", "light");
     }
     link.type = "text/css";
