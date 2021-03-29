@@ -55,7 +55,7 @@ function setDownloadButton() {
     downloadDiv.innerHTML = `<p class="browser-notworking-text">Cet appareil n'est pas compatible</p>`;
   }
   else {
-    downloadDiv.innerHTML = `<p class="browser-notworking-text">Ce navigateur n'est pas compatible. Vous pouvez tout de même essayer l'<a href="injection-manuelle.html">injection manuelle</a></p>`;
+    downloadDiv.innerHTML = `<p class="browser-notworking-text">Ce navigateur n'est pas compatible. Vous pouvez tout de même essayer l'<a href="injection-manuelle">injection manuelle</a></p>`;
   }
 }
 
