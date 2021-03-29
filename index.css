@@ -1,0 +1,144 @@
+body {
+  font-family: Arial;
+  padding: 0;
+  margin: 0;
+}
+
+body.injection-manuelle-body {
+  margin: 10px;
+}
+
+.title-1 {
+  color: #2ecc71;
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: -20px;
+  text-align: center;
+}
+
+.title-2 {
+  color: #27ae60;
+  font-size: 70px;
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#browser-download {
+  text-align: center;
+}
+
+#other-browser-download {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.other_browsers {
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content;
+  max-width: 100%;
+  margin: auto;
+  justify-content: center;
+}
+
+.other_browsers a:not(.download-button) {
+  max-width: 50%;
+  max-height: 55px;
+}
+
+.other_browsers img {
+  max-width: 100%;
+  height: 55px !important;
+}
+
+.other_browsers .download-button {
+  border-radius: 0;
+  padding: 18px 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.product-description {
+  color: #7f8c8d;
+  text-align: center;
+}
+
+.download-button {
+  color: #eee;
+  background: #3498db;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.category-1 {
+  position: relative;
+  background: #fafafa;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.category-2 {
+  position: relative;
+  background: none;
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.category-title {
+  margin-top: 0;
+}
+
+.category-title span {
+  color: #27ae60;
+}
+
+.category-description {
+  color: #7f8c8d;
+  padding: 0 5%;
+}
+
+.category-illustration {
+  object-fit: contain;
+  max-height: 500px;
+  max-width: 90%;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 15%), 0 25px 30px 0 rgb(0 0 0 / 35%);
+}
+
+span.code {
+  background-color: #DEDEDE;
+  border-width: 2px;
+  border-radius: 3px;
+  border-style: solid;
+  border-color: #DEDEDE;
+}
+
+input[type="url"] {
+  width: 500px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body, input[type="url"] {
+    background-color: #222;
+    color: #ddd;
+  }
+  .category-1 {
+    background: #272727;
+  }
+  a {
+    color: blue;
+  }
+  span.code {
+    background-color: #343434;
+    border-color: #343434;
+  }
+  .download-button {
+    background: #2980b9;
+  }
+}

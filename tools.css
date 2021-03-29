@@ -1,0 +1,60 @@
+@import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+#changepdpline input[type="radio"], #changehsdiv input[type="radio"] {
+  vertical-align: text-bottom;
+  margin: 0 4px;
+}
+
+input#pdpCustomUrl {
+  border: #888 solid 1px;
+}
+
+.customSettingLine input[type="radio"], .customSettingLine input[type="checkbox"] {
+  margin: 2px;
+  position: unset !important;
+  opacity: unset !important;
+  pointer-events: unset !important;
+}
+.autoconnect_div div {
+  margin: 0 10px 0 0;
+}
+.oled_div {
+  margin-left: 10px;
+}
+.autoconnect_infos_div {
+  display: flex;
+}
+.autoconnect_infos_div[disabled], .ipu_personnalisation_ligne[disabled] {
+  display: none !important;
+}
+.autoconnect_div input[type="checkbox"], .oled_div input[type="checkbox"] {
+  vertical-align: text-top;
+}
+.customSettingLine label {
+  font-size: 12px;
+  vertical-align: top;
+  padding: 4px;
+}
+select.customSettingLine {
+  width: unset;
+  display: unset;
+  margin: 0;
+  padding: 0;
+  height: 21px;
+}
+#changeapparencelinemobile div.customSettingLine.right {
+  padding-top: 10px;
+}
+
+.notes_contextmenu {
+  position: fixed;
+  z-index: 1000;
+  width: 100px;
+  height: 100px;
+  background: #fff;
+}
+
+.PT_moveWidget {
+  background: #ccc !important;
+  cursor: pointer;
+}

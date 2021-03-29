@@ -1,0 +1,472 @@
+html, body {
+  background: #000;
+  color: #ccc;
+}
+.interface_affV {
+  background: inherit !important;
+}
+.ObjetBandeauEspace {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+}
+.dotty {
+  background-color: inherit !important;
+  background-image: radial-gradient(circle, #101010 5%, transparent 10%), radial-gradient(circle, #101010 5%, transparent 10%) !important;
+}
+.widget {
+  background-color: #111 !important;
+  color: #ccc !important;
+}
+.widget li a {
+  color: #ccc !important;
+}
+.widget .content-container > div[id^=id_] h4 {
+  color: #ccc;
+}
+.widget .content-container > div[id^=id_] .liste-nested h5, .widget .content-container > div[id^=id_] .liste-groups h5, .widget .content-container > div[id^=id_] .liste-ressources h5 {
+  color: #ddd;
+}
+.widget.travailafaire h3.clickable, .widget.travailafaire h3 > a:hover, .widget.travailafaire h3 > span.AvecMain, .widget.ressourcepedagogique h3.clickable, .widget.ressourcepedagogique h3 > a, .widget.ressourcepedagogique h3 > span.AvecMain, .widget.kiosque h3 {
+  color: #a478d4;
+}
+.widget.travailafaire h3.clickable:hover, .widget.travailafaire h3 > a:hover, .widget.travailafaire h3 > span.AvecMain:hover, .widget.ressourcepedagogique h3.clickable:hover, .widget.ressourcepedagogique h3 > a:hover, .widget.ressourcepedagogique h3 > span.AvecMain:hover {
+  color: #4a1b7f;
+}
+.widget.viescolaire h3.clickable, .widget.viescolaire h3 > a, .widget.viescolaire h3 > span.AvecMain {
+  color: #439bd6;
+}
+.widget.viescolaire h3.clickable:hover, .widget.viescolaire h3 > a:hover, .widget.viescolaire h3 > span.AvecMain:hover {
+  color: #005f9e;
+}
+.widget.notes h3.clickable, .widget.notes h3 > a, .widget.notes h3 > span.AvecMain {
+  color: #f9a62c;
+}
+.widget.notes h3.clickable:hover, .widget.notes h3 > a:hover, .widget.notes h3 > span.AvecMain:hover {
+  color: #a55800;
+}
+.widget.lienutile h3, .widget.agenda h3.clickable, .widget.agenda h3 > a, .widget.agenda h3 > span.AvecMain, .widget.actualites h3.clickable, .widget.actualites h3 > a, .widget.actualites h3 > span.AvecMain, .widget.discussions h3.clickable, .widget.discussions h3 > a, .widget.discussions h3 > span.AvecMain {
+  color: #66b783;
+}
+.widget.agenda h3.clickable:hover, .widget.agenda h3 > a:hover, .widget.agenda h3 > span.AvecMain:hover, .widget.actualites h3.clickable:hover, .widget.actualites h3 > a:hover, .widget.actualites h3 > span.AvecMain:hover, .widget.discussions h3.clickable:hover, .widget.discussions h3 > a:hover, .widget.discussions h3 > span.AvecMain:hover {
+  color: #00663d;
+}
+.kiosque .content-container > div[id^="id_"] ul > li .link-as-wrapper span {
+  color: #ddd;
+}
+.objetbandeauentete_global .objetBandeauEntete_thirdmenu {
+  background-color: #090909;
+}
+.EspaceIndex input:not([type]).style-input, .EspaceIndex input[type="text"].style-input, .EspaceIndex input[type="email"].style-input, .EspaceIndex input[type="password"].style-input, .input-wrapper input, .as-input {
+  background: #000;
+  color: #ccc;
+}
+.submenu-wrapper, .ObjetMenuContexutel {
+  background: #101010 !important;
+}
+.item-menu_niveau1:hover, .item-menu_niveau2:hover, .ObjetMenuContexutel tr:hover {
+  background: #111 !important;
+}
+.item-menu_niveau1, .item-menu_niveau2, .ObjetMenuContexutel tr {
+  color: #ccc !important;
+  background: #101010 !important;
+}
+.UtilitaireBloc_containerInverse {
+  background: #111 !important;
+}
+.DAT_DocumentCadre {
+  background-color: #111;
+}
+.item-menu_niveau0:hover, .item-menu_niveau0.focused-in, .item-menu_niveau0.item-selected {
+  background: #000;
+  color: #ccc;
+}
+div.objetBandeauEntete_secondmenu {
+  background-color: #101010;
+}
+div.objetBandeauEntete_secondmenu > div:first-child > ul li.selected {
+  background-color: #333;
+}
+li.objetmenuprincipalCombo.objetmenuprincipalCombo.objetmenuprincipalComboSelect {
+  background: #333;
+  color: #ccc;
+}
+li.objetmenuprincipalCombo:hover, li.objetmenuprincipalCombo.objetmenuprincipal_focusedin {
+  background: #666;
+  color: #ccc;
+}
+div.objetmenuprincipal_niveau0 ul {
+  background: #444;
+  color: #ccc;
+}
+div.objetBandeauEntete_secondmenu > div:first-child > ul > li {
+  color: #ccc;
+}
+#GInterface_T {
+  background: #333;
+}
+.TitreSectionAccueil {
+  border-bottom: 1px solid #6B6E77;
+  height:27px;
+  width:100%;
+  background-color: #333;
+  color:#aaa;
+}
+.CarteCompteZoneGenerique {
+  background: #111;
+}
+.InlineBlock:not(.AlignementMilieuVertical, .AlignementHaut, .EspaceGauche, .EspaceDroit, .icon-home) {
+  color: #ccc;
+  background-color: #111;
+}
+.Tableau {
+  background: #111;
+  color: #ccc;
+}
+.FondBlanc {
+  background: #111;
+}
+.WidgetLignePaire {
+  background: #333;
+  color: #ccc;
+}
+.WidgetLigneImpaire {
+  background: #111;
+  color: #ccc;
+}
+.WidgetCumul {
+  background: #333;
+  border: none;
+  color: #ccc;
+}
+.ie-ellipsis:not(.NoWrap) {
+  background: none;
+  color: #ccc;
+}
+div.AlignementHaut[role="tree"] {
+  background-color: #333;
+  color: #ccc;
+}
+.AlignementDroit.PetitEspaceDroit {
+  color: #ccc !important;
+}
+.ObjetGrille .conteneurAbs canvas {
+  background-color: #111;
+}
+div.objetBandeauEntete_thirdmenu {
+  background-color: #222;
+}
+div.AlignementMilieu.Gras.EspaceHaut {
+  color: #ccc;
+}
+button.ieBouton.Texte10.OmbreFocus.NoWrap.ieBoutonDefautSansImage {
+  background-color: #111;
+}
+.PetitEspace.Italique {
+  color: #ccc;
+}
+div.DivBloc.BlocPastille.z-depth-3.ArrondisBloc {
+  background-color: #111;
+}
+div.DivBloc.BlocPastille.z-depth-3.ArrondisBloc > * {
+  background-color: #111;
+}
+.UtilitaireBloc_itemInverse > div:not(.celluleMarqueur) {
+  width: calc(100% - 6px);
+  background-color: #111 !important;
+  color: #ccc !important;
+}
+.Bloc_Contenu.UtilitaireBloc_itemNormal > div > div {
+  background-color: #111 !important;
+  color: inherit !important;
+}
+.Bloc_Contenu.UtilitaireBloc_itemNormal > div > div > div > div {
+  background-color: #111 !important;
+}
+div.UtilitaireBloc_itemInverse.Bloc_InfoCompl.AlignementDroit.AlignementHaut.EspaceHaut {
+  background-color: #111 !important;
+}
+div.EspaceGauche.EspaceDroit.InlineBlock.AlignementMilieuVertical.PourFenetreBloc_Contenu {
+  background-color: #111;
+}
+.ObjetBoutonBandeau_iconeInactive::before {
+  color: #111;
+}
+i.ObjetBoutonBandeau_icone {
+  background-color: #111;
+  border-color: #333;
+}
+.themeBoutonSecondaire.ieBouton.Texte10.OmbreFocus.NoWrap {
+  background-color: #101010;
+}
+tr[valign='top'] > td {
+  height: 100%;
+  min-height: 16px;
+  background-color: #111 !important;
+  color: #ccc !important;
+}
+td[style="border: #C5C5C5 1px solid;background:#F8F8F8;color:#0A9B6A;text-align:center;font-weight:bold;padding:0;width:6%;"] {
+  background: #111 !important;
+}
+td[style="border: 1px solid rgb(197, 197, 197); color: black; text-align: center; font-weight: bold; padding: 0px; width: 2%; background-color: white;"] {
+  background: #222 !important;
+}
+td[style="border: 1px solid rgb(197, 197, 197); color: white; text-align: center; font-weight: bold; padding: 0px; width: 2%; background: rgb(246, 246, 246);"] {
+  background: #303030 !important;
+}
+td[style="border: 1px solid rgb(197, 197, 197); color: black; text-align: center; font-weight: bold; padding: 0px; width: 2%; background: rgb(209, 233, 218);"] {
+  background: #304030 !important;
+}
+.Texte10 tbody tr td.AlignementMilieu.Gras.Texte14[style=" background-color:#F6F6F6; color:#F6F6F6;"] {
+  background: #303030 !important;
+}
+.Texte10 tbody tr td.AlignementMilieu.Gras.Texte14[style=" background-color:#D1E9DA; color:#D1E9DA;"] {
+  background: #304030 !important;
+}
+label {
+  color: #ccc !important;
+}
+div.EspaceGauche {
+  color: #ccc;
+}
+.AvecMain::after {
+  background-color: #000;
+}
+div.objetmenuprincipal_niveau0 > ul > li:hover {
+  background-color: #333;
+}
+div.objetBandeauEntete_secondmenu > div:first-child > ul > li > ul {
+  background-color: #111;
+}
+div.objetBandeauEntete_secondmenu > div:first-child > ul > li > ul > li:hover {
+  background-color: #333;
+}
+.BlocDevoirEvaluation {
+  background-color: #101010;
+}
+.deroulant-conteneur-show-hide {
+  background: #333;
+}
+.deroulant-conteneur-show-hide .liste-as-options > li .as-li {
+  background: inherit !important;
+  color: inherit !important;
+}
+.deroulant-conteneur-show-hide .liste-as-options > li .as-li:hover {
+  background: #3498db !important;
+}
+td.EspaceGauche.AlignementHaut > div.Gras.DoubleEspace {
+  background-color: #191919 !important;
+  color: #eee;
+}
+.Texte10.Gras.AlignementMilieu.GrandEspaceHaut {
+  color: #ccc;
+}
+.Espace > table {
+  color: #ccc;
+}
+.Texte10.Gras.AlignementMilieu {
+  color: #ccc;
+}
+textarea, textarea:disabled {
+  background-color: #111;
+  color: #ccc;
+}
+table.SansMain {
+  background-color: #222;
+}
+.Texte10.Gras {
+  color: #ccc;
+}
+.DivBloc.BlocPastille.z-depth-1.ArrondisBloc {
+  background-color: #111;
+}
+.EspaceBas .Gras.EspaceGauche.MaClasseBordure {
+  background: none !important;
+  color: #ccc !important;
+}
+.iecb.iecbrbgauche.Gras.NoWrap {
+  color: #ccc;
+}
+.AvecSelectionTexte.AvecMain {
+  background-color: #222;
+  color: #ccc;
+}
+.ObjetTimeline_BlocCompact {
+  background-color: #111;
+}
+div.Bloc_Contenu.UtilitaireBloc_itemNormal > div > div > div > div.Espace > div {
+  color: #ccc;
+}
+.Fenetre_Cadre.Fenetre_Scroll {
+  background-color: #111 !important;
+}
+.BlocPastille {
+  background-color: #111 !important;
+}
+.PourFenetreBloc_Contenu > .Espace {
+  background-color: inherit !important;
+}
+.EspaceHaut.EspaceBas > .Espace {
+  background-color: #222;
+}
+.Texte10.Fenetre_Cadre {
+  background-color: #222;
+}
+.Texte10.Fenetre_Cadre > tbody > tr > td {
+  background-color: #222;
+}
+.liste_gridTitre {
+  background: inherit !important;
+}
+.Texte10.Fenetre_Cadre > tbody > tr > td > div > div {
+  background-color: #222;
+}
+.Texte10.Fenetre_Cadre > tbody > tr > td > div > div > div > div.InlineBlock {
+  background-color: #111;
+}
+.InlineBlock.AlignementMilieuVertical > .InlineBlock > .InlineBlock {
+  background-color: #111 !important;
+}
+.AvecMain.SouligneSurvol.AlignementMilieuVertical.EspaceDroit {
+  color: #ccc !important;
+}
+.Fenetre_Cadre, .Fenetre_Cadre .NoWrap, .Fenetre_Cadre td {
+  background: #111 !important;
+}
+.Fenetre_Cadre .InlineBlock.AlignementMilieuVertical.PourFenetreBloc_Contenu, .Fenetre_Cadre .InlineBlock.AlignementMilieuVertical.PourFenetreBloc_Contenu div {
+  background: #0f0f0f !important;
+}
+.Fenetre_Cadre .InlineBlock.AlignementMilieuVertical.PourFenetreBloc_Contenu div {
+  border: 1px solid #0f0f0f !important;
+}
+.Fenetre_Cadre .InlineBlock.AlignementMilieuVertical.PourFenetreBloc_Contenu .PetitEspaceHaut.PetitEspaceBas {
+  background: #0a0a0a !important;
+  border: 1px solid #0a0a0a !important;
+}
+.InlineBlock {
+  color: #ccc !important;
+}
+.NePasImprimer.SansSelectionTexte > div:not(.Texte):nth-child(2)[style="clear:both; position:relative; top:100px; border: 2px solid #C5C5C5; color:black; background-color:#F8F8F8;margin-left:auto; margin-right:auto; text-align : center; min-width:290px; max-width:800px; width:50%; padding:10px;"] {
+  background-color: #222 !important;
+  color: #ddd !important;
+}
+.Gras {
+  color: #ddd;
+}
+table.Tableau td.Titre, table.Tableau tr:first-child {
+  background: inherit !important;
+}
+div[style="float:right"] {
+  color: #ddd;
+}
+.jspTrack {
+  background-color: #111;
+}
+.jspVerticalBar .jspDrag {
+  background-color: #333;
+  border-color: #080808;
+}
+.jspVerticalBar .jspDrag.jspHover {
+  background-color: #111;
+}
+.jspArrow {
+  background-color: #111;
+}
+.jspArrow:hover {
+  background-color: #080808;
+}
+.jspArrow.jspDisabled:hover {
+  background-color: #111;
+}
+select#apparenceselector {
+  background: #333;
+  color: #ccc;
+}
+.EspaceGauche.ZoneDeplacementFenetre.IE_draggable.ui-draggable-handle {
+  color: #ccc;
+}
+.VoileOpaque {
+  background-color: black;
+}
+.BoutonPageCommune {
+  color: #ccc;
+}
+#id_36_connect.InlineBlock.AlignementMilieuVertical {
+  background-color: #111 !important;
+}
+input {
+  background: #333;
+  color: #ccc;
+}
+input#pdpCustomFile {
+  background: none;
+}
+div[role="tab"] {
+  background: #333;
+  color: #ccc;
+}
+button.ieBouton.themeBoutonNeutre {
+  background: #333;
+  color: #ccc;
+}
+button.ieBouton.themeBoutonNeutre:disabled {
+  background: #101010;
+  color: #333;
+}
+button.ieBouton:disabled i.ieBoutonIcon {
+  color: #333 !important;
+}
+button.ieBouton.themeBoutonNeutre:hover:enabled {
+  background: #111;
+  color: #ccc;
+}
+.traitVertical {
+  border-right: dotted 0.3rem #222 !important;
+}
+.blocTimeline-etiquette.Espace.AlignementMilieu.ie-ellipsis {
+  background-color: #222 !important;
+}
+.blocTimeline-etiquette.Espace.AlignementMilieu.ie-ellipsis span {
+  color: inherit !important;
+}
+.jspContainer .jspPane div[style="display:flex;"] div[style="background-color : white;"] {
+  background: none !important;
+}
+.jspContainer .jspPane div[style="display:flex;"] div[style="background-color : #F6F6F6;"] {
+  background: #191919 !important;
+}
+.MessageInformatif {
+  background: #111 !important;
+  color: #ccc;
+}
+.MessageInformatif td[role="alert"] {
+  color: #ccc !important;
+}
+.LigneRessource .OmbreFocus.PastilleRessource {
+  background: #222 !important;
+}
+.SansMain.InterfaceSelectionRessourceCours > div {
+  background: #111 !important;
+}
+.SansMain.InterfaceSelectionRessourceCours > div > div:not(.ConteneurRessources) {
+  background: #333 !important;
+}
+.Fenetre_Bordure.ConteneurFiches, .EnteteDecroche > div:nth-child(2) {
+  background: #333 !important;
+}
+.EnteteDecroche > div > svg > polygon {
+  fill: #333 !important;
+}
+#resetline button {
+  background: #000;
+  color: #ccc;
+  border-width: 1px;
+  border-style: solid;
+  cursor: pointer;
+}
+.objetbandeauentete_global .objetBandeauEntete_menu:not(.ongletLudique) {
+  background: #090909;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
