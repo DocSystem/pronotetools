@@ -350,7 +350,7 @@ div.Bloc_Contenu.UtilitaireBloc_itemNormal > div > div > div > div.Espace > div 
   color: #eee !important;
 }
 .Gras {
-  color: #eee;
+  color: #eee !important;
 }
 table.Tableau td.Titre, table.Tableau tr:first-child {
   background: inherit !important;
@@ -466,4 +466,137 @@ button.ieBouton.themeBoutonNeutre:hover:enabled {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+/* =================================
+====         MOBILE PART        ====
+================================= */
+
+span.date {
+  color: #ccc;
+}
+
+li.as-header > h4 {
+  color: #d0d0d0 !important;
+}
+
+.sidenav.aside-nav-right .btn-commands-container {
+  background: #333 !important;
+}
+
+.sidenav.side-panel-complet.right-aligned {
+  background: #333;
+}
+
+.ObjetCentraleNotifications > header .cn_compteurTotal > div {
+  background: #111;
+}
+
+section.btn-commands-container i::before {
+  color: #ddd;
+}
+
+.objetInterfaceMobile_zoneSelection {
+  background: #333;
+}
+
+.objetInterfaceMobile_zoneSelection .btn-flat, .objetInterfaceMobile_zoneSelection button.btn-flat.btn-floating, .objetInterfaceMobile_zoneSelection .btn-flat:focus, .objetInterfaceMobile_zoneSelection .btn-flat:hover {
+  background: #333;
+  color: #eee;
+}
+
+.btn-floating.btn-flat i:before {
+  color: #eee;
+}
+
+.collapsible-header {
+  background: #555;
+}
+
+.collection li:not(.with-action), .collapsible .collapsible-header.empty-body {
+  background: #444;
+}
+
+.card {
+  background: #555;
+}
+
+.modal.modal-fixed-footer.ObjetFenetre_Mobile.modal-fixed-header.open, .modal-footer, .modal-content {
+  background: #333 !important;
+}
+
+.modal.modal-fixed-footer .modal-footer button.modal-action.waves-effect.btn-flat {
+  color: #ddd;
+}
+
+button.ieBouton:not(.themeBoutonPrimaire):not(.themeBoutonConnexion):not(.themeTabBar) {
+  background: #444;
+  border: #666 1px solid;
+  color: #eee;
+}
+
+ul.tabs {
+  background: #444;
+}
+
+.tabs .tab a, .tabs .tab a:hover, .tabs .tab a i, .tabs .tab a:hover i, .tabs .tab a span, .tabs .tab a:hover span {
+  color: #ddd;
+}
+
+.collection li.with-action {
+  background: #333;
+}
+
+.collection .collection-item {
+  border-bottom: 1px solid #666;
+}
+
+.collection.with-header .collection-header {
+  background: #444;
+}
+
+.datepicker-calendar {
+  background: #333;
+}
+
+.datepicker-table td.is-outside-current-month, .datepicker-table td.is-disabled {
+  color: #999;
+}
+
+.sidenav.side-panel.right-aligned {
+  background: #333;
+}
+
+.navheader, .subheader {
+  background: #555 !important;
+  color: #eee !important;
+}
+
+button.btn-floating.btn-flat {
+  background: #555;
+}
+
+.petitBlocDonnees div:first-child {
+  background: #555;
+}
+
+.petitBlocDonnees div:last-child {
+  background: #444;
+  border: 2px solid #505050;
+}
+
+.sidenav.side-panel.right-aligned .Espace .left-align {
+  color: #ddd !important;
+}
+
+.sidenav.side-panel.right-aligned .Espace .Espace {
+  background: #333 !important;
+}
+
+.ObjetListe .collection tr.collection-item td.with-action {
+  background: #444;
+}
+
+.ObjetListe .collection tr.collection-item td.with-action-simple {
+  background: #444;
 }
