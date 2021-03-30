@@ -585,7 +585,7 @@ button.btn-floating.btn-flat {
   border: 2px solid #505050;
 }
 
-.sidenav.side-panel.right-aligned .Espace .left-align {
+.left-align {
   color: #ddd !important;
 }
 
@@ -632,5 +632,5 @@ button.btn-floating.btn-flat {
 }
 
 .card .card-content .small .Espace .Espace {
-  background: #444;
+  background: #444 !important;
 }

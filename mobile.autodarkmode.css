@@ -582,7 +582,7 @@
     border: 2px solid #505050;
   }
 
-  .sidenav.side-panel.right-aligned .Espace .left-align {
+  .left-align {
     color: #ddd !important;
   }
 
@@ -629,7 +629,7 @@
   }
 
   .card .card-content .small .Espace .Espace {
-    background: #444;
+    background: #444 !important;
   }
 }
 
