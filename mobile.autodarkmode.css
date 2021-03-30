@@ -597,6 +597,10 @@
   .ObjetListe .collection tr.collection-item td.with-action-simple {
     background: #444;
   }
+  
+  .collection {
+    border: 1px solid #666;
+  }
 }
 
 ::-webkit-scrollbar {
