@@ -604,3 +604,33 @@ button.btn-floating.btn-flat {
 .collection {
   border: 1px solid #666;
 }
+
+.collection li.collection-cours:not(.with-action) {
+  background: #333;
+}
+
+.collection .collection-absencecours:not(.with-action) {
+  background: #555;
+  border-color: #666;
+}
+
+.statutCoursMobile {
+  background: #555 !important;
+}
+
+.statutCoursMobile span {
+  color: #ddd !important;
+}
+
+.sidenav .collapsible-body, .sidenav.fixed .collapsible-body {
+  background: #444;
+}
+
+.collection.collection-thin .collection-item {
+  color: inherit;
+  background: inherit;
+}
+
+.card .card-content .small .Espace .Espace {
+  background: #444;
+}
