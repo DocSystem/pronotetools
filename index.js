@@ -45,9 +45,9 @@ function setDownloadButton() {
     downloadDiv.innerHTML = `<a href="https://chrome.google.com/webstore/detail/pronote-tools/hpafamfiapepcmikhahoolhoielfblpp"><img src="https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/UV4C4ybeBTsZt43U4xis.png" alt="Voir dans le Chrome Web Store" /></a>`;
     //downloadDiv.innerHTML = `<a href='//www.microsoft.com/store/productId/0RDCKDSHJ1HB?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='English badge' style='height: 58px;'/></a>`;
   }
-  /*else if (userBrowser() == "safari") {
-    downloadDiv.innerHTML = `<a href="Pronote-Tools-Safari.zip" class="download-button">Télécharger pour Safari</a>`;
-  }*/
+  else if (userBrowser() == "safari") {
+    downloadDiv.innerHTML = `<a href="safari/pronote-tools-macOS.zip" class="download-button">Télécharger pour Safari (macOS)</a>`;
+  }
   else if (userBrowser() == "ios") {
     downloadDiv.innerHTML = `<a href="https://routinehub.co/shortcut/8359/" class="download-button">Obtenir le raccourci</a>`;
   }
