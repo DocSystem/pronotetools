@@ -1,5 +1,9 @@
 @import "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 #changepdpline input[type="radio"], #changehsdiv input[type="radio"] {
   vertical-align: text-bottom;
   margin: 0 4px;

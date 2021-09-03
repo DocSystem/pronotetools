@@ -1,8 +1,8 @@
 # Pronote Tools
 
-* Dark Mode
-* OLED Mode (Darker mode)
 * PDP Changer
+* Hide useless things (legal mentions, scrollbar...)
+* Auto Login
 
 ## Warning
 

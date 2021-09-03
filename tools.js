@@ -2,17 +2,8 @@ var config = window.localStorage;
 var isMobileAgent = (document.location.href.split("/").pop().split(".")[0] == "mobile");
 var urlParams = new URLSearchParams(document.location.search);
 
-if (config.getItem("mode") == null) {
-  config.setItem("mode", "auto");
-}
-if (config.getItem("oled") == null) {
-  config.setItem("oled", "false");
-}
 if (config.getItem("pdp") == null) {
   config.setItem("pdp", "true");
-}
-if (config.getItem("customNotes") == null) {
-  config.setItem("customNotes", JSON.stringify({}));
 }
 if (config.getItem("autologin") == null) {
   config.setItem("autologin", "false");
@@ -25,122 +16,12 @@ if (config.getItem("removeuseless") == null) {
 }
 window.autologininfos = JSON.parse(config.getItem("autologininfos"));
 
-function patchCSS(mode, oled) {
-  if (mode == "tools") {
-    var link = document.createElement("link");
-    link.href = "https://docsystem.xyz/pronotetools/tools.css";
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    document.getElementsByTagName("head")[0].appendChild(link);
-  }
-  else if (document.getElementById('darkmodecss') != null) {
-    var link = document.getElementById('darkmodecss');
-    if (mode == "auto") {
-      if (isMobileAgent) {
-        if (oled == "true") {
-          link.setAttribute("href", "https://docsystem.xyz/pronotetools/mobile.autoblackmode.css");
-          config.setItem("oled", "true");
-        }
-        else {
-          link.setAttribute("href", "https://docsystem.xyz/pronotetools/mobile.autodarkmode.css");
-          config.setItem("oled", "false");
-        }
-      }
-      else {
-        if (oled == "true") {
-          link.setAttribute("href", "https://docsystem.xyz/pronotetools/autoblackmode.css");
-          config.setItem("oled", "true");
-        }
-        else {
-          link.setAttribute("href", "https://docsystem.xyz/pronotetools/autodarkmode.css");
-          config.setItem("oled", "false");
-        }
-      }
-      config.setItem("mode", "auto");
-    }
-    else if (mode == "dark") {
-      if (isMobileAgent) {
-        if (oled == "true") {
-          link.setAttribute("href", "https://docsystem.xyz/pronotetools/mobile.blackmode.css");
-        }
-        else {
-          link.setAttribute("href", "https://docsystem.xyz/pronotetools/mobile.darkmode.css");
-        }
-      }
-      else {
-        if (oled == "true") {
-          link.setAttribute("href", "https://docsystem.xyz/pronotetools/blackmode.css");
-          config.setItem("oled", "true");
-        }
-        else {
-          link.setAttribute("href", "https://docsystem.xyz/pronotetools/darkmode.css");
-          config.setItem("oled", "false");
-        }
-      }
-      config.setItem("mode", "dark");
-    }
-    else if (mode == "light") {
-      link.setAttribute("href", "https://docsystem.xyz/pronotetools/lightmode.css");
-      config.setItem("mode", "light");
-    }
-  }
-  else {
-    var link = document.createElement("link");
-    if (mode == "auto") {
-      if (isMobileAgent) {
-        if (oled == "true") {
-          link.href = "https://docsystem.xyz/pronotetools/mobile.autoblackmode.css";
-          config.setItem("oled", "true");
-        }
-        else {
-          link.href = "https://docsystem.xyz/pronotetools/mobile.autodarkmode.css";
-          config.setItem("oled", "false");
-        }
-      }
-      else {
-        if (oled == "true") {
-          link.href = "https://docsystem.xyz/pronotetools/autoblackmode.css";
-          config.setItem("oled", "true");
-        }
-        else {
-          link.href = "https://docsystem.xyz/pronotetools/autodarkmode.css";
-          config.setItem("oled", "false");
-        }
-      }
-      config.setItem("mode", "auto");
-    }
-    else if (mode == "dark") {
-      if (isMobileAgent) {
-        if (oled == "true") {
-          link.href = "https://docsystem.xyz/pronotetools/mobile.blackmode.css";
-          config.setItem("oled", "true");
-        }
-        else {
-          link.href = "https://docsystem.xyz/pronotetools/mobile.darkmode.css";
-          config.setItem("oled", "false");
-        }
-      }
-      else {
-        if (oled == "true") {
-          link.href = "https://docsystem.xyz/pronotetools/blackmode.css";
-          config.setItem("oled", "true");
-        }
-        else {
-          link.href = "https://docsystem.xyz/pronotetools/darkmode.css";
-          config.setItem("oled", "false");
-        }
-      }
-      config.setItem("mode", "dark");
-    }
-    else if (mode == "light") {
-      link.href = "https://docsystem.xyz/pronotetools/lightmode.css";
-      config.setItem("mode", "light");
-    }
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.setAttribute("id", "darkmodecss");
-    document.getElementsByTagName("head")[0].appendChild(link);
-  }
+function patchCSS() {
+  var link = document.createElement("link");
+  link.href = "https://docsystem.xyz/pronotetools/tools.css";
+  link.type = "text/css";
+  link.rel = "stylesheet";
+  document.getElementsByTagName("head")[0].appendChild(link);
 }
 
 function patchSettings() {
@@ -148,7 +29,7 @@ function patchSettings() {
     if (document.getElementsByClassName("InlineBlock ipu_personnalisation")[0] != null) {
       var settings = document.getElementsByClassName("InlineBlock ipu_personnalisation")[0].parentNode.parentNode;
       if (document.getElementById('changepdpline') == null) {
-        var pronotetoolssettings = `<div class="NoWrap EspaceGauche GrandEspaceHaut GrandEspaceBas CarteCompteZoneGenerique"><div class="WhiteSpaceNormal InlineBlock Gras AlignementHaut" style="width:160px; color:black;"><span class="GrandEspaceDroit CarteCompteZoneGenerique_Title">Pronote Tools</span></div><div class="InlineBlock ipu_personnalisation"><div id="changepdpline" class="ipu_personnalisation_ligne"><div onchange="changePdpStatus()">Photo de profil : <input type="radio" id="pdpEnabled" value="pdpEnabled" name="pdpStatus" checked=""><label for="pdpEnabled">Activé</label><input type="radio" id="pdpCustom" value="pdpCustom" name="pdpStatus"><label for="pdpCustom"><input type="url" value="" id="pdpCustomUrl" onclick="document.getElementById('pdpCustom').checked=true" onchange="changePdpStatus()" placeholder="Custom URL" style="width: 350px;"></label><input type="radio" id="pdpDisabled" value="pdpDisabled" name="pdpStatus"><label for="pdpDisabled">Désactivé</label></div></div><div id="changeapparenceline" class="ipu_personnalisation_ligne"><div>Apparence : <select id="apparenceselector" onchange="changeApparence(this)"><option value="auto" id="apparenceselectorauto">Auto</option><option value="light" id="apparenceselectorlight">Clair</option><option value="dark" id="apparenceselectordark">Sombre</option></select></div><div class="oled_div"><input type="checkbox" name="oledmode" id="oledmode" onchange="changeOledMode(this.checked)"><label for="oledmode"> Mode OLED</label></div><div class="oled_div"><input type="checkbox" name="uselessmode" id="uselessmode" onchange="changeUselessMode(this.checked)"><label for="uselessmode"> Cacher les objets inutiles</label></div></div><div id="changeacline" class="autoconnect_div ipu_personnalisation_ligne"><div><input type="checkbox" name="acenabled" id="acenabled" onchange="changeAutoconnect(this.checked)"><label for="acenabled"> Connexion automatique</label></div><div class="autoconnect_infos_div" disabled><div><label for="acuser">Nom d'utilisateur : </label><input type="text" name="acuser" id="acuser" onchange="changeAutoconnectData('user', this.value)"></div><div><label for="acpass">Mot de passe : </label><input type="password" name="acpass" id="acpass" onchange="changeAutoconnectData('pass', this.value)"></div></div></div><div id="resetline" class="ipu_personnalisation_ligne"><div><button onclick="resetConfig()">Réinitialiser Pronote Tools</button></div></div></div></div>`;
+        var pronotetoolssettings = `<div class="NoWrap EspaceGauche GrandEspaceHaut GrandEspaceBas CarteCompteZoneGenerique"><div class="WhiteSpaceNormal InlineBlock Gras AlignementHaut" style="width:160px; color:black;"><span class="GrandEspaceDroit CarteCompteZoneGenerique_Title">Pronote Tools</span></div><div class="InlineBlock ipu_personnalisation"><div id="changepdpline" class="ipu_personnalisation_ligne"><div onchange="changePdpStatus()">Photo de profil : <input type="radio" id="pdpEnabled" value="pdpEnabled" name="pdpStatus" checked=""><label for="pdpEnabled">Activé</label><input type="radio" id="pdpCustom" value="pdpCustom" name="pdpStatus"><label for="pdpCustom"><input type="url" value="" id="pdpCustomUrl" onclick="document.getElementById('pdpCustom').checked=true" onchange="changePdpStatus()" placeholder="Custom URL" style="width: 350px;"></label><input type="radio" id="pdpDisabled" value="pdpDisabled" name="pdpStatus"><label for="pdpDisabled">Désactivé</label></div></div><div id="changeapparenceline" class="ipu_personnalisation_ligne"><div class="oled_div"><input type="checkbox" name="uselessmode" id="uselessmode" onchange="changeUselessMode(this.checked)"><label for="uselessmode"> Cacher les objets inutiles</label></div></div><div id="changeacline" class="autoconnect_div ipu_personnalisation_ligne"><div><input type="checkbox" name="acenabled" id="acenabled" onchange="changeAutoconnect(this.checked)"><label for="acenabled"> Connexion automatique</label></div><div class="autoconnect_infos_div" disabled><div><label for="acuser">Nom d'utilisateur : </label><input type="text" name="acuser" id="acuser" onchange="changeAutoconnectData('user', this.value)"></div><div><label for="acpass">Mot de passe : </label><input type="password" name="acpass" id="acpass" onchange="changeAutoconnectData('pass', this.value)"></div></div></div><div id="resetline" class="ipu_personnalisation_ligne"><div><button onclick="resetConfig()">Réinitialiser Pronote Tools</button></div></div></div></div>`;
         pronotetoolssettings = new DOMParser().parseFromString(pronotetoolssettings, 'text/html');
         pronotetoolssettings = pronotetoolssettings.body.firstChild;
         settings.appendChild(pronotetoolssettings);
@@ -158,15 +39,6 @@ function patchSettings() {
         else if ((config.getItem("pdp") != "true") && (config.getItem("pdp") != null)) {
           document.getElementById('pdpCustom').setAttribute("checked", "");
           document.getElementById('pdpCustomUrl').value = config.getItem("pdp")
-        }
-        if (config.getItem("mode") == "dark") {
-          document.getElementById('apparenceselectordark').setAttribute("selected", "");
-        }
-        else if (config.getItem("mode") == "light") {
-          document.getElementById('apparenceselectorlight').setAttribute("selected", "");
-        }
-        if (config.getItem("oled") == "true") {
-          document.getElementById('oledmode').checked = true;
         }
         if (config.getItem("removeuseless") == "true") {
           document.getElementById('uselessmode').checked = true;
@@ -187,7 +59,7 @@ function patchSettings() {
     if ((document.querySelector('#GInterface\\.Instances\\[0\\]\\.Instances\\[0\\]') != null) && (document.querySelector('#GInterface\\.Instances\\[0\\]\\.Instances\\[0\\]').childNodes.length == 1) && (document.querySelector('#GInterface\\.Instances\\[0\\]\\.Instances\\[0\\]').childNodes[0].classList == "FondBlanc Espace")) {
       var settings = document.querySelector('#GInterface\\.Instances\\[0\\]\\.Instances\\[0\\]')
       if (document.getElementById('changepdpline') == null) {
-        var pronotetoolssettings = `<div class="FondBlanc Espace" style="border-bottom: 1px solid #c4c4c4;"><div class="left Gras">Photo de profil : </div><div onchange="changePdpStatus()" class="customSettingLine"><input type="radio" id="pdpEnabled" value="pdpEnabled" name="pdpStatus" checked=""><label for="pdpEnabled">Activé</label><input type="radio" id="pdpDisabled" value="pdpDisabled" name="pdpStatus"><label for="pdpDisabled">Désactivé</label><input type="radio" id="pdpCustom" value="pdpCustom" name="pdpStatus"><label for="pdpCustom"><input type="url" value="" id="pdpCustomUrl" onclick="document.getElementById('pdpCustom').checked=true" onchange="changePdpStatus()" placeholder="Custom URL" style="width: 350px;"></label></div><div class="clear"></div></div><div class="FondBlanc Espace" id="changeapparencelinemobile" style="border-bottom: 1px solid #c4c4c4;"><div class="left Gras">Apparence : </div><select id="apparenceselector" onchange="changeApparence(this)" class="customSettingLine right"><option value="auto" id="apparenceselectorauto">Auto</option><option value="light" id="apparenceselectorlight">Clair</option><option value="dark" id="apparenceselectordark">Sombre</option></select><br><div class="customSettingLine right"><input type="checkbox" name="oledmode" id="oledmode" onchange="changeOledMode(this.checked)"><label for="oledmode"> Mode OLED</label></div><div class="customSettingLine right"><input type="checkbox" name="uselessmode" id="uselessmode" onchange="changeUselessMode(this.checked)"><label for="uselessmode"> Cacher les objets inutiles</label></div><div class="clear"></div></div><div class="FondBlanc Espace" style="border-bottom: 1px solid #c4c4c4;"><div class="left Gras">Connexion automatique : </div><div class="customSettingLine"><input type="checkbox" name="acenabled" id="acenabled" onchange="changeAutoconnect(this.checked)"><label for="acenabled">Activer la connexion automatique</label></div><div class="autoconnect_infos_div" disabled><div><label for="acuser">Nom d'utilisateur : </label><input type="text" name="acuser" id="acuser" onchange="changeAutoconnectData('user', this.value)"></div><div><label for="acpass">Mot de passe : </label><input type="password" name="acpass" id="acpass" onchange="changeAutoconnectData('pass', this.value)"></div></div><div class="clear"></div></div>`;
+        var pronotetoolssettings = `<div class="FondBlanc Espace" style="border-bottom: 1px solid #c4c4c4;"><div class="left Gras">Photo de profil : </div><div onchange="changePdpStatus()" class="customSettingLine"><input type="radio" id="pdpEnabled" value="pdpEnabled" name="pdpStatus" checked=""><label for="pdpEnabled">Activé</label><input type="radio" id="pdpDisabled" value="pdpDisabled" name="pdpStatus"><label for="pdpDisabled">Désactivé</label><input type="radio" id="pdpCustom" value="pdpCustom" name="pdpStatus"><label for="pdpCustom"><input type="url" value="" id="pdpCustomUrl" onclick="document.getElementById('pdpCustom').checked=true" onchange="changePdpStatus()" placeholder="Custom URL" style="width: 350px;"></label></div><div class="clear"></div></div><div class="FondBlanc Espace" id="changeapparencelinemobile" style="border-bottom: 1px solid #c4c4c4;"><br><div class="customSettingLine right"><input type="checkbox" name="uselessmode" id="uselessmode" onchange="changeUselessMode(this.checked)"><label for="uselessmode"> Cacher les objets inutiles</label></div><div class="clear"></div></div><div class="FondBlanc Espace" style="border-bottom: 1px solid #c4c4c4;"><div class="left Gras">Connexion automatique : </div><div class="customSettingLine"><input type="checkbox" name="acenabled" id="acenabled" onchange="changeAutoconnect(this.checked)"><label for="acenabled">Activer la connexion automatique</label></div><div class="autoconnect_infos_div" disabled><div><label for="acuser">Nom d'utilisateur : </label><input type="text" name="acuser" id="acuser" onchange="changeAutoconnectData('user', this.value)"></div><div><label for="acpass">Mot de passe : </label><input type="password" name="acpass" id="acpass" onchange="changeAutoconnectData('pass', this.value)"></div></div><div class="clear"></div></div>`;
         pronotetoolssettings = new DOMParser().parseFromString(pronotetoolssettings, 'text/html');
         pronotetoolssettings.querySelectorAll(".FondBlanc.Espace").forEach((i) => {
           settings.appendChild(i);
@@ -198,15 +70,6 @@ function patchSettings() {
         else if ((config.getItem("pdp") != "true") && (config.getItem("pdp") != null)) {
           document.getElementById('pdpCustom').setAttribute("checked", "");
           document.getElementById('pdpCustomUrl').value = config.getItem("pdp")
-        }
-        if (config.getItem("mode") == "dark") {
-          document.getElementById('apparenceselectordark').setAttribute("selected", "");
-        }
-        else if (config.getItem("mode") == "light") {
-          document.getElementById('apparenceselectorlight').setAttribute("selected", "");
-        }
-        if (config.getItem("oled") == "true") {
-          document.getElementById('oledmode').checked = true;
         }
         if (config.getItem("removeuseless") == "true") {
           document.getElementById('uselessmode').checked = true;
@@ -267,7 +130,7 @@ function patchPDP() {
   }
 }
 
-function patchNotes() {
+/*function patchNotes() {
   if (getCurrentPage() == "notes") {
     if (document.querySelector("#GInterface\\.Instances\\[2\\]\\.Instances\\[1\\]") != null) {
       const notes = document.querySelectorAll("#GInterface\\.Instances\\[2\\]\\.Instances\\[1\\]_Contenu_1 > tbody > tr > td:nth-child(2) > div > div > div > div > div > div:nth-child(1)");
@@ -299,7 +162,7 @@ function patchNotes() {
       }
     }
   }
-}
+}*/
 
 function patchUseless() {
   if (config.getItem("removeuseless") == "true") {
@@ -331,17 +194,11 @@ function patchUseless() {
 }
 
 function resetConfig() {
-  config.removeItem("mode");
   config.removeItem("pdp");
   config.removeItem("customNotes");
   config.removeItem("autologin");
   config.removeItem("autologininfos");
   config.removeItem("removeuseless");
-}
-
-function changeApparence(elem) {
-  patchCSS(elem.value, config.getItem("oled"));
-  config.setItem("mode", elem.value);
 }
 
 function changeOledMode(val) {
@@ -424,23 +281,17 @@ $('body').on('DOMSubtreeModified', 'div[data-role="page"]', function(){
 });
 
 window.onstorage = (e) => {
-  if (e.key == "mode") {
-    patchCSS(e.newValue, config.getItem("oled"));
-  }
-  else if (e.key == "oled") {
-    patchCSS(config.getItem("mode"), e.newValue);
-  }
-  else if (e.key == "pdp") {
+  if (e.key == "pdp") {
     patchPDP();
   }
 };
 
-window.notes = {};
+/*window.notes = {};
 window.notes.currentlySelected = 0;
 if (config.getItem("customNotes") == null) {
   config.setItem("customNotes", JSON.stringify({}));
 }
-window.notes.customNotes = JSON.parse(config.getItem("customNotes"));
+window.notes.customNotes = JSON.parse(config.getItem("customNotes"));*/
 
 function getCurrentPage() {
   try {
@@ -505,7 +356,7 @@ const callback = function(mutationsList, observer) {
 const observer = new MutationObserver(callback);
 observer.observe(document.querySelector("body"), { attributes: false, childList: true, subtree: true });
 
-document.oncontextmenu = function (e) {
+/*document.oncontextmenu = function (e) {
   if (getCurrentPage() == "notes") {
     e.preventDefault();
     if (window.isContextMenuOpen != true) {
@@ -517,9 +368,9 @@ document.oncontextmenu = function (e) {
     }
     else {
       window.menuElem.parentNode.removeChild(window.menuElem)
-      window.isContextMenuOpen = false;config.getItem("oled")
+      window.isContextMenuOpen = false;
     }
-    /*const notes = document.querySelectorAll("#GInterface\\.Instances\\[2\\]\\.Instances\\[1\\]_Contenu_1 > tbody > tr > td:nth-child(2) > div > div > div > div > div > div:nth-child(1)");
+    const notes = document.querySelectorAll("#GInterface\\.Instances\\[2\\]\\.Instances\\[1\\]_Contenu_1 > tbody > tr > td:nth-child(2) > div > div > div > div > div > div:nth-child(1)");
     try {
       const noteElem = document.querySelector("#GInterface\\.Instances\\[2\\]_detail > div > div.BlocDevoirEvaluation_Contenu > div > table > tbody > tr:nth-child(2) > td:nth-child(1) > table > tbody > tr:nth-child(1) > td.Gras");
       var newNote = prompt("Nouvelle note pour " + document.querySelector("#GInterface\\.Instances\\[2\\]_detail > div > div.BlocDevoirEvaluation_Contenu > div > table > tbody > tr:nth-child(1) > td > div").innerText + " :", noteElem.innerText);
@@ -539,9 +390,9 @@ document.oncontextmenu = function (e) {
         window.notes.customNotes[window.notes.currentlySelected] = newNote;
         config.setItem("customNotes", JSON.stringify(window.notes.customNotes));
       }
-    }*/
+    }
   }
-}
+}*/
 
 window.onclick = function (e) {
   if (window.isContextMenuOpen) {
@@ -555,6 +406,5 @@ document.onreadystatechange = function (e) {
   setTimeout(makeAutoconnect, 2000);
 }
 
-patchCSS(config.getItem("mode"), config.getItem("oled"));
-patchCSS("tools", config.getItem("oled"));
+patchCSS();
 makeAutoconnect();
